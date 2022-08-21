@@ -10,11 +10,11 @@
   </head>
   <body>
     <nav class="py-4">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start position-relative">
         <h3 class="navbar-brand me-auto">Personal</h3>
-        <ul class="navbar-nav ms-md-auto mt-4 mt-md-0 flex-md-row align-items-center">
+        <ul id="topNav" class="navbar-nav ms-md-auto mt-4 mt-md-0 flex-md-row align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link active" href="#">Home</a>
           </li>
           <li class="nav-item mt-2 mt-md-0 ms-md-5">
             <a class="nav-link" href="#">About</a>
@@ -29,12 +29,16 @@
             <button class="slideBtn" type="button" name="button">Contact</button>
           </li>
         </ul>
+        <div class="d-block d-md-none" id="menu-icon"></div>
       </div>
     </nav>
   <script src="assets/bootstrap.5.bundle.min.js"></script>
   <script src="assets/jquery.min.js"></script>
   <script>
     $(function() {
+      $("#menu-icon").click(function(){
+        $("#topNav").toggleClass("active");
+      });
     })
   </script>
   </body>
