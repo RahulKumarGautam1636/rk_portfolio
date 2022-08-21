@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Learning</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\fontawesome.min.css">
+    <script defer src="js/fontawesome-all.min.js"></script>
+    <style media="screen">
+      body {
+        /* background: #7cd5ff; */
+        padding-left: 5rem;
+      }
+      #myDropdown > a {
+        background: #ffffff !important;
+        border: 3px solid #0fb5ff;
+        padding: 8px 0;
+        border-radius: 5px;
+        font-family: system-ui;
+        font-weight: 600;
+        color: #0fb5ff;
+        box-shadow: none;
+      }
+      .dropdown-item {
+        padding: 12px 20px;
+        background-color: transparent;
+        border-bottom: 1px solid #0fb5ff;
+        font-weight: 600;
+        color: #0fb5ff;
+      }
+      .dropdown-menu {
+        border-width: 10px 3px;
+        border-style: solid;
+        border-color: rgb(15, 181, 255);
+        border-radius: 8px !important;
+        overflow-y: scroll;
+        max-height: 13rem;
+      }
+      #myDropdown > a::after {
+        margin-left: 2.5rem;
+      }
+      #myDropdown .dropdown-item:hover {
+        color: #ffffff;
+        background-color: #00bcd4c4;
+      }
+            /* width */
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(15, 181, 255);
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body class="vh-100">
+    <div class="dropdown mt-4" id="myDropdown" style="width:18rem;">
+      <a class="btn btn-secondary dropdown-toggle w-100" href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false">Department / Specialities</a>
+      <div class="dropdown-menu w-100 mt-3 p-0" aria-labelledby="dropdownLink">
+        <ul class="w-100 ps-0 mb-0 h-100" style="list-style: none;">
+          <li>
+            <a href="#" class="dropdown-item">First item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Second item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Third item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">First item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Second item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Third item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">First item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Second item</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">Third item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
