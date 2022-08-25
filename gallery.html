@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/portfolio-styles.css">
+    <link rel="stylesheet" href="css/bootstrap.5.min.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box;}
+      body {
+        background-color: #FFDEE9;
+        background-image: linear-gradient(0deg, #92fffba3 0%, #B5FFFC 100%);
+      }
+      .main-banner {
+        height: 115vh;
+        width: 100%;
+      }
+      .main-banner > img {
+        height: 100%;
+        width: 100%;
+      }
+      .main-banner::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000c4;
+        z-index: 0;
+        content: "";
+      }
+      .main-banner > div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -88%);
+        color: white;
+        z-index: 10;
+        text-align: center;
+      }
+      .main-banner h1 {
+        font-size: 5rem;
+      }
+      .main-banner p {
+        font-size: 2rem;
+        font-style: italic;
+      }
+      .main-banner > div::before,
+      .main-banner > div::after {
+        content: "";
+        position: absolute;
+        bottom: 31px;
+        left: 0;
+        width: 29%;
+        background: white;
+        height: 10px;
+      }
+      .main-banner > div::after {
+        right: 0;
+        left: auto;
+      }
+
+
+a {
+  text-decoration: none;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand img {
+  width: 50px;
+}
+
+.p1:hover, .p2:hover {
+
+}
+
+h4 {
+	color: grey;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+#portfolio p {
+	color: grey;
+	font-size: 12px;
+	font-weight: 200;
+}
+
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+}
+
+.single-content img {
+  width: 290px;
+  height: 100%;
+  margin: 15px;
+}
+
+.filters {
+	width: 100%;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	padding: 20px 0;
+}
+
+li {
+	display: inline;
+	padding: 10px 25px;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 400;
+	cursor: pointer;
+  	text-transform: uppercase;
+  	letter-spacing: .2em;
+}
+
+li:hover {
+	color: #a6a6a6;
+}
+
+li.active {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div class="p-4">
+      <div class="main-banner position-relative">
+        <img src="images/MAIN-BANNER.jpg" alt="banner">
+        <div class="">
+          <img class="mb-5" src="images/SARSUNA LOGO NEW.png" alt="logo" style="transform: scale(1.5);">
+          <h1 class="text-nowrap">Sarsuna College</h1>
+          <p>Image Gallery</p>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="transform: translateY(-18rem); z-index: 100;">
+      <div class="filters filter-button-group">
+		  <ul><h4>
+		    <li class="active" data-filter="*">All</li>
+		    <li data-filter=".webdesign">Independence Day</li>
+		    <li data-filter=".webdev">Event Celebration</li>
+		    <li data-filter=".brand">Other Images</li>
+		  </h4></ul>
+		</div>
+
+		<div class="content grid">
+
+		  <div class="single-content webdesign webdev grid-item">
+				<img class="p2" src="images/IMG1.jpg">
+		  </div>
+
+		  <div class="single-content brand webdesign grid-item">
+				<img class="p2" src="images/IMG2.jpg">
+		  </div>
+
+		  <div class="single-content brand grid-item">
+				<img class="p2" src="images/IMG3.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG4.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG5.jpg">
+		  </div>
+
+            <div class="single-content webdesign brand grid-item">
+				<img class="p2" src="images/IMG6.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG7.jpg">
+		  </div>
+
+            <div class="single-content webdesign webdev grid-item">
+				<img class="p2" src="images/IMG8.jpg">
+		  </div>
+
+		  <div class="single-content brand grid-item">
+				<img class="p2" src="images/IMG9.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG10.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG11.jpg">
+		  </div>
+
+            <div class="single-content webdesign brand grid-item">
+				<img class="p2" src="images/IMG12.jpg">
+		  </div>
+
+            <div class="single-content webdesign grid-item">
+				<img class="p2" src="images/IMG13.jpg">
+		  </div>
+
+            <div class="single-content webdesign webdev grid-item">
+				<img class="p2" src="images/MAIN-BANNER.jpg">
+		  </div>
+
+
+        </div>
+    </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/isotope.filter.min.js"></script>
+  <script>
+    $(document).ready( function() {
+
+    $('.grid').isotope({
+     itemSelector: '.grid-item',
+    });
+
+    // filter items on button click
+    $('.filter-button-group').on( 'click', 'li', function() {
+     var filterValue = $(this).attr('data-filter');
+     $('.grid').isotope({ filter: filterValue });
+     $('.filter-button-group li').removeClass('active');
+     $(this).addClass('active');
+    });
+       })
+  </script>
+  </body>
+</html>
