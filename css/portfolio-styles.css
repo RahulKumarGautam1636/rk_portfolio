@@ -1,0 +1,241 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: gray;
+  height: 300vh;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.slideBtn {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 7px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #707070;
+  /* background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%); */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 2px solid #cfcfcf;
+  background: white;
+}
+.slideBtn::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(42deg, #ff2a2a, #ec4bff);
+  transition: 0.5s ease-in-out;
+}
+.slideBtn:hover {
+    color: white;
+    border: 2px solid transparent;
+}
+.slideBtn:hover::before {
+  width: 100%;
+}
+.navbar-brand {
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  color: #707070 !important;
+}
+nav .nav-link {
+  color: #707070;
+  font-weight: 600;
+  font-size: 14px;
+}
+nav .nav-link.active {
+  color: #DBDB31 !important;
+}
+#menu-icon {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 4%;
+    height: 3px;
+    width: 27px;
+    background: red;
+}
+#menu-icon::before,
+#menu-icon::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 0%;
+    height: 3px;
+    width: 27px;
+    background: red;
+}
+#menu-icon::after {
+    top: 9px !important;
+}
+nav {
+  overflow-y: hidden;
+}
+#topNav {
+  transition: 0.3s ease-in-out;
+  pointer-events: all;
+  transform: translateX(0);
+}
+#hero {
+  min-height: 100vh;
+}
+#hero h1 {
+  font-size: 5.5rem;
+  color: #F6AA44;
+}
+#hero p {
+  margin: 1rem 0 2.5rem 0;
+}
+#hero button {
+  width: 13rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.round-background {
+  position: absolute;
+  height: 31.5%;
+  width: 36.5%;
+  border-radius: 50%;
+  background: cyan;
+  z-index: -1;
+  bottom: 32%;
+  left: 14%;
+}
+#red {
+  bottom: 21%;
+  left: 56%;
+  background: #F6D1A1;
+}
+.rounded-img-box {
+  height: 53px;
+  width: 53px;
+  padding: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 9px 0px;
+  position: absolute;
+  top: 17%;
+  right: 13%;
+  display: grid;
+  place-items: center;
+  animation: up-down 1.6s ease-in-out infinite alternate-reverse both;
+}
+#google {
+  top: 39%;
+  left: 16%;
+  animation: up-down 1.1s ease-in-out infinite alternate-reverse both;
+  animation-delay: 0.3s;
+}
+#Twitter {
+  top: 54%;
+  right: 7%;
+  animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+  animation-delay: 0.6s;
+}
+.floating-tag {
+  position: absolute;
+  left: 0;
+  bottom: 26%;
+  z-index: 10;
+  padding: 11px 20px;
+  background: #583B15;
+  border-radius: 10px;
+  color: white;
+  /* animation: up-down 1.5s ease-in-out infinite alternate-reverse both; */
+}
+
+#float-back {
+  bottom: 61%;
+  left: 60%;
+  z-index: -1;
+  background: #245663;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+/* @keyframes hoverIt {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+} */
+.left-block > div {
+  width: 22rem;
+  height: 7rem;
+  background: #85DCFF;
+  border-radius: 10px;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.left-block > div::before {
+  content: "";
+  height: 107%;
+  width: 84%;
+  background: #f7f7f7;
+  background: white;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -79%);
+  border-radius: 10px;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+.left-block > div > div {
+  background: white;
+  display: inline;
+  padding: 11px 15px;
+  z-index: 100;
+  border-radius: 50%;
+  border: 10px solid #FFD9A7;
+  font-size: 29px;
+  font-weight: bold;
+  color: #535353;
+  transform: translateY(-100%);
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+.left-block h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -79%);
+  white-space: nowrap;
+  font-size: 22px;
+  color: gray;
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  #topNav {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-110%);
+    pointer-events: none;
+  }
+  #topNav.active {
+    transform: translate(0) !important;
+    pointer-events: all !important;
+    opacity: 1;
+    visibility: visible;
+  }
+}
