@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {                          // Universal reset (Best practice).
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;         /* set root font size to 62.5% of default browser font size which is 16px. This gives us 1rem = 10px */
+}
+
+body {
+  box-sizing: border-box;
+}
