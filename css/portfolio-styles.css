@@ -372,4 +372,8 @@ nav {
   #services-section {
     padding-top: 12rem;
   }
+  .hero-container .row > div {
+    align-items: center !important;
+    text-align: center;
+  }
 }
