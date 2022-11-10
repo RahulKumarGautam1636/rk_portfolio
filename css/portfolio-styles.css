@@ -1,27 +1,36 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+}
 body {
   background: gray;
   height: 300vh;
+}
+
+p, span, b {
+  font-size: 1.6rem;
 }
 header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  background: #f9f7ff;
 }
 .slideBtn {
   font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding: 7px 30px;
-  border-radius: 5px;
+  font-size: 1.4rem;
+  letter-spacing: .1rem;
+  padding: .7rem 3rem;
+  border-radius: .5rem;
   transition: 0.5s;
   color: #707070;
   /* background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%); */
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 2px solid #cfcfcf;
+  border: .2rem solid #cfcfcf;
   background: white;
 }
 .slideBtn::before {
@@ -38,45 +47,48 @@ header {
 }
 .slideBtn:hover {
     color: white;
-    border: 2px solid transparent;
+    border: .2rem solid transparent;
 }
 .slideBtn:hover::before {
   width: 100%;
 }
 .navbar-brand {
-  font-size: 21px !important;
+  font-size: 2.1rem !important;
   font-weight: 700 !important;
   color: #707070 !important;
+}
+#topNav li:not(:first-child) {
+  margin-left: 5rem;
 }
 nav .nav-link {
   color: #707070;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 nav .nav-link.active {
   color: #DBDB31 !important;
 }
 #menu-icon {
-    content: "";
-    position: absolute;
-    top: 8px;
-    right: 4%;
-    height: 3px;
-    width: 27px;
-    background: red;
+  content: "";
+  position: absolute;
+  top: .8rem;
+  right: 4%;
+  height: .3rem;
+  width: 2.7rem;
+  background: red;
 }
 #menu-icon::before,
 #menu-icon::after {
-    content: "";
-    position: absolute;
-    top: -9px;
-    right: 0%;
-    height: 3px;
-    width: 27px;
-    background: red;
+  content: "";
+  position: absolute;
+  top: -.9rem;
+  right: 0%;
+  height: .3rem;
+  width: 2.7rem;
+  background: red;
 }
 #menu-icon::after {
-    top: 9px !important;
+  top: .9rem !important;
 }
 nav {
   overflow-y: hidden;
@@ -86,43 +98,104 @@ nav {
   pointer-events: all;
   transform: translateX(0);
 }
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vw;
+}
+.hero-container .row {
+  height: 92vh;
+  max-height: 66rem;
+  max-width: 1320px;
+}
 #hero {
-  min-height: 100vh;
+  /* min-height: 100vh;
+  margin-top: 7rem;
+  background-image: url('../assets/img/bg/Screenshot4.png');
+  background-size: 101% 97%;
+  z-index: 0; */
+  min-height: 98vh;
+  margin-top: 7rem;
+  background-image: url(../assets/img/bg/Screenshot4.png);
+  background-size: 101% 100%;
+  z-index: 0;
+}
+.floating-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#emojiSmily {
+  top: 7rem;
+  left: 38rem;
 }
 #hero h1 {
-  font-size: 5.5rem;
+  font-size: clamp(32px, 7vw, 88px);
   color: #F6AA44;
 }
 #hero p {
-  margin: 1rem 0 2.5rem 0;
+  margin: 2.5rem 0 3rem 0;
 }
-#hero button {
-  width: 13rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+.btn-hireMe {
+  width: 21rem;
+  position: relative;
+  outline: none;
+  font-size: 2.3rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.7rem !important;
+  padding: 0.9rem 0 !important;
+  transition: 0.15s !important;
+}
+.btn-hireMe:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 0.5rem 10rem rgb(0 0 0 / 20%) !important;
+}
+.btn-hireMe:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
+}
+.btn-hireMe::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: -1;
+  border-radius: 1rem;
+  opacity: 0.7;
+  transition: 0.3s linear;
+  pointer-events: none;
+}
+.btn-hireMe:hover::after {
+    opacity: 0;
+    transform: scaleX(2) scaleY(1.5);
 }
 .round-background {
   position: absolute;
-  height: 31.5%;
-  width: 36.5%;
+  height: clamp(5rem, 16vw, 21rem);
+  width: clamp(4rem, 19vw, 24rem);
   border-radius: 50%;
   background: cyan;
   z-index: -1;
   bottom: 32%;
-  left: 14%;
+  top: clamp(26rem, 18vw, 26rem);
+  left: clamp(1rem, 5vw, 9rem);
 }
 #red {
-  bottom: 21%;
-  left: 56%;
+  top: clamp(5rem, 32vw, 33rem);
+  left: clamp(10rem, 25vw, 36.7rem);
   background: #F6D1A1;
 }
 .rounded-img-box {
-  height: 53px;
-  width: 53px;
-  padding: 12px;
+  height: clamp(1rem, 10vw, 5.3rem);
+  width: clamp(1rem, 10vw, 5.3rem);
+  padding: clamp(0.5rem, 2vw, 1.2rem);
   border-radius: 50%;
   background: #fff;
-  box-shadow: rgb(0 0 0 / 15%) 0px 5px 9px 0px;
+  box-shadow: rgb(0 0 0 / 15%) 0rem .5rem .9rem 0rem;
   position: absolute;
   top: 17%;
   right: 13%;
@@ -147,11 +220,14 @@ nav {
   left: 0;
   bottom: 26%;
   z-index: 10;
-  padding: 11px 20px;
+  padding: 1.1rem 2rem;
   background: #583B15;
-  border-radius: 10px;
+  border-radius: 1rem;
   color: white;
   /* animation: up-down 1.5s ease-in-out infinite alternate-reverse both; */
+}
+.floating-tag p {
+  font-size: clamp(0.5rem, 3.2vw, 1.6rem);
 }
 
 #float-back {
@@ -163,30 +239,37 @@ nav {
 
 @keyframes up-down {
   0% {
-    transform: translateY(5px);
+    transform: translateY(.5rem);
   }
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-.5rem);
   }
 }
-/* @keyframes hoverIt {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-} */
+
+#services-section {
+  padding: 14rem 0;
+  background-color: #f7f7f8;
+  background-image: url(../assets/img/bg/Screenshot1.png);
+  background-size: 101% 156%;
+  margin-top: -7rem;
+  z-index: 1;
+  padding-top: 15rem;
+}
+.left-block, .middle-block, .right-block {
+  height: 37rem;
+  margin-top: 5rem;
+  width: 35rem;
+}
 .left-block > div {
-  width: 22rem;
-  height: 7rem;
+  height: 11rem;
   background: #85DCFF;
-  border-radius: 10px;
+  border-radius: 1rem;
   position: relative;
   z-index: -1;
   display: flex;
   justify-content: center;
   align-items: start;
+  transform: translateY(3.5rem);
 }
 .left-block > div::before {
   content: "";
@@ -198,44 +281,95 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: transform 0.3s;
+  transition-delay: 0.4s;
+  transform: translate(-50%, -54%);
+  border-radius: 1rem;
+  box-shadow: rgb(100 100 111 / 20%) 0rem .7rem 2.9rem 0rem;
+}
+.left-block > div.visible::before {
   transform: translate(-50%, -79%);
-  border-radius: 10px;
-  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 .left-block > div > div {
   background: white;
   display: inline;
-  padding: 11px 15px;
+  padding: 1.1rem 1.5rem;
   z-index: 100;
   border-radius: 50%;
-  border: 10px solid #FFD9A7;
-  font-size: 29px;
+  border: 1rem solid #FFD9A7;
+  font-size: 2.9rem;
   font-weight: bold;
   color: #535353;
+  transform: translateY(0);
+  transition: transform 0.7s ease-in-out;
+  transition-delay: 0.6s;
+  box-shadow: rgb(100 100 111 / 20%) 0rem .7rem 2.9rem 0rem;
+}
+.left-block > div > div.visible {
   transform: translateY(-100%);
-  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 .left-block h4 {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -79%);
   white-space: nowrap;
-  font-size: 22px;
+  font-size: 2.2rem;
   color: gray;
   font-weight: bold;
 }
+.services-card {
+  background: linear-gradient(45deg, #dd4cd8, #ef7e7e);
+  border-radius: 1rem;
+  opacity: 0.9;
+}
+.services-card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media only screen and (max-width: 768px) {
+  html {
+    font-size: 54.5%;
+  }
   #topNav {
-    visibility: hidden;
     opacity: 0;
     transform: translateX(-110%);
+    visibility: hidden;
     pointer-events: none;
+    z-index: 111;
   }
   #topNav.active {
     transform: translate(0) !important;
     pointer-events: all !important;
     opacity: 1;
     visibility: visible;
+  }
+  #topNav li {
+    margin-left: 0;
+  }
+  #hero .row {
+    height: auto;
+    padding-bottom: 13rem;
+    max-height: initial;
+  }
+  #hero-image {
+    margin-bottom: 4.5rem;
+  }
+  #hero h1 {
+    font-size: clamp(32px, 15vw, 88px);
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .left-block, .middle-block, .right-block {
+    width: 90%;
+    max-width: 36rem;
+  }
+  .floating-tag {
+    padding: 5px 9px;
+  }
+  #services-section {
+    padding-top: 12rem;
   }
 }
