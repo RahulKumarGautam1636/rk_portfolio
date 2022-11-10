@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/portfolio-styles.css">
     <link rel="stylesheet" href="css/bootstrap.5.min.css">
-    <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <header>
-      <nav class="py-4">
+      <nav style="padding: 2.3rem 0; z-index: 1;">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start position-relative">
           <h3 class="navbar-brand me-auto">Personal</h3>
           <ul id="topNav" class="navbar-nav ms-md-auto mt-4 mt-md-0 flex-md-row align-items-center">
             <li class="nav-item">
               <a class="nav-link active" href="#">Home</a>
             </li>
-            <li class="nav-item mt-2 mt-md-0 ms-md-5">
+            <li class="nav-item mt-2 mt-md-0">
               <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item mt-2 mt-md-0 ms-md-5">
+            <li class="nav-item mt-2 mt-md-0">
               <a class="nav-link" href="#">Services</a>
             </li>
-            <li class="nav-item mt-2 mt-md-0 ms-md-5">
+            <li class="nav-item mt-2 mt-md-0">
               <a class="nav-link" href="#">More</a>
             </li>
-            <li class="nav-item mt-2 mt-md-0 ms-md-5">
+            <li class="nav-item mt-2 mt-md-0">
               <button class="slideBtn" type="button" name="button">Contact</button>
             </li>
           </ul>
@@ -34,16 +34,17 @@
         </div>
       </nav>
     </header>
-    <section id="hero">
-      <div class="container pt-4">
-        <div class="row row-cols-1 row-cols-lg-2 vh-100">
-          <div class="order-2 order-lg-1 col d-flex flex-column justify-content-center h-100 align-items-start">
+    <section id="hero" class="position-relative">
+      <div class="hero-container">
+        <div class="row row-cols-1 row-cols-md-2 px-2">
+          <div class="order-2 order-md-1 col d-flex flex-column justify-content-center h-100 align-items-start pb-md-5 position-relative">
+            <!-- <img id="emojiSmily" class="floating-image" src="assets/img/emojiSmily.png" alt="emojiSmily"/> -->
             <h1>Hy! I Am<br>
-              R. K. Gautam</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-            <button class="btn btn-lg btn-info text-white" type="button" name="button">Hire Me</button>
+              John T. Doe</h1>
+            <p style="font-weight: 500; color: #585858;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+            <button id="hireMe" class="btn btn-lg btn-info text-white btn-hireMe" type="button" name="button">Hire Me</button>
           </div>
-          <div id="hero-image" class="order-1 order-lg-2 col d-flex justify-content-center align-items-center position-relative">
+          <div id="hero-image" class="order-1 order-md-2 col d-flex justify-content-center align-items-center position-relative">
             <img class="img-fluid w-100" src="assets/img/hero.png" alt="hero_image">
             <div id="insta" class="rounded-img-box">
               <img class="img-fluid w-100" src="assets/img/instagram.png" alt="instagram">
@@ -66,23 +67,46 @@
         </div>
       </div>
   </section>
-  <section>
-    <div class="container d-flex">
-      <div class="left-block">
-        <div class="mb-4">
-          <div class="" style="border: 10px solid #85DCFF;">20</div>
+  <section id="services-section">
+    <div class="container d-flex justify-content-around align-items-center flex-wrap">
+      <div class="left-block" style="z-index: 1;">
+        <div class="mb-4" id="job-card-1">
+          <div id="job-card-1-count" style="border: 10px solid #85DCFF;">20</div>
           <h4>Jobs Done Successfully</h4>
         </div>
-        <div class="" style="background: #FFD9A7; margin-top: 7rem;">
-          <div class="">09</div>
+        <div id="job-card-2" style="background: #FFD9A7; margin-top: 11.5rem;">
+          <div id="job-card-2-count">09</div>
           <h4>Jobs Done Successfully</h4>
         </div>
       </div>
-      <div class="">
-
+      <div class="middle-block text-white">
+        <div class="services-card h-100 p-5 pb-4 d-flex justify-content-around align-items-center flex-column">
+          <div class="top-section text-center position-relative">
+            <i class='bx bxs-smile' style="font-size: 3.5rem;"></i>
+            <i style="position: absolute; transform: translate(-62%, -57%);font-size: 3.5rem;" class='bx bxs-wink-smile'></i>
+            <h1 style="font-size: 3rem;">Services</h1>
+          </div>
+          <ul class="w-100 d-flex justify-content-around flex-column mb-0 ps-0" style="height: 50%; list-style: none">
+            <li>
+              <p class="mb-0">Product Designer</p>
+              <i class='bx bx-pulse h1 mb-0'></i>
+              <span class="text-dark h3 fw-bold mb-0">100%</span>
+            </li>
+            <li style="border-top: 1px solid #ffffff4a; border-bottom: 1px solid #ffffff4a; padding: 8px 0;">
+              <p class="mb-0">Front End Developer</p>
+              <i class='bx bx-code-alt h1 mb-0'></i>
+              <span class="text-dark h3 fw-bold mb-0">100%</span>
+            </li>
+            <li>
+              <p class="mb-1">Branding Designer</p>
+              <i class='bx bx-spa h1 mb-1'></i>
+              <span class="text-dark h3 fw-bold mb-1">100%</span>
+            </li>
+          </ul>
+          <h1>Experience Working</h1>
+        </div>
       </div>
-      <div class="">
-
+      <div class="right-block" style="background: cyan; border-radius: 1rem;">
       </div>
     </div>
   </section>
@@ -94,6 +118,7 @@
         $("#topNav").toggleClass("active");
       });
     })
+
     window.addEventListener('scroll', function() {
       let value = window.scrollY;
       document.getElementById('float-back').style.transform = "translateY(-" + value * 0.2 + "px)";
@@ -101,8 +126,31 @@
       document.getElementById('blue').style.transform = "translateY(-" + value * 0.1 + "px)";
       document.getElementById('red').style.transform = "translateY(-" + value * 0.5 + "px)";
       // document.getElementById('red').style.marginTop = "-" + value + "px";
-
+      toggleVisibleClass('#job-card-1');
+      toggleVisibleClass('#job-card-2');
+      toggleVisibleClass('#job-card-1-count');
+      toggleVisibleClass('#job-card-2-count');
     })
+
+    function isInViewport(selectorName) {
+        const element = document.querySelector(selectorName);
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function toggleVisibleClass(selectorName) {
+      let item = $(selectorName);
+      if (isInViewport(selectorName) && !item.hasClass('visible')) {
+        item.addClass('visible');
+      } else if (!isInViewport(selectorName) && item.hasClass('visible')) {
+        item.removeClass('visible');
+      }
+    }
   </script>
   </body>
 </html>
