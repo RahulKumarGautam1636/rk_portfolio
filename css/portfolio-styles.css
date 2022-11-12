@@ -297,12 +297,12 @@ nav {
   left: 50%;
   transition: transform 0.3s;
   transition-delay: 0.4s;
-  transform: translate(-50%, -54%);
+  transform: translate(-50%, -54%) translateZ(10px);
   border-radius: 1rem;
   box-shadow: rgb(100 100 111 / 20%) 0rem .7rem 2.9rem 0rem;
 }
 .left-block > div.visible::before {
-  transform: translate(-50%, -79%);
+  transform: translate(-50%, -79%) translateZ(10px);
 }
 .left-block > div > div {
   background: white;
@@ -326,7 +326,7 @@ nav {
   position: absolute;
   top: 48%;
   left: 50%;
-  transform: translate(-50%, -79%);
+  transform: translate(-50%, -79%) translateZ(15px);
   white-space: nowrap;
   font-size: 2.2rem;
   color: gray;
