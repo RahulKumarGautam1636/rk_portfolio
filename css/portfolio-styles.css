@@ -2,6 +2,8 @@
 
 html {
   font-size: 62.5%;
+  overflow: auto;
+  overflow-y: overlay;
 }
 body {
   background: gray;
@@ -183,6 +185,7 @@ nav {
   bottom: 32%;
   top: clamp(26rem, 18vw, 26rem);
   left: clamp(1rem, 5vw, 9rem);
+  transform: translateZ(-30px);
 }
 #red {
   top: clamp(5rem, 32vw, 33rem);
@@ -239,14 +242,15 @@ nav {
 
 @keyframes up-down {
   0% {
-    transform: translateY(.5rem);
+    transform: translateY(.5rem) translateZ(37px);
   }
   100% {
-    transform: translateY(-.5rem);
+    transform: translateY(-.5rem) translateZ(37px);
   }
 }
 
 #services-section {
+  position: relative;
   padding: 14rem 0;
   background-color: #f7f7f8;
   background-image: url(../assets/img/bg/Screenshot1.png);
@@ -255,10 +259,19 @@ nav {
   z-index: 1;
   padding-top: 15rem;
 }
+#services-section > div {
+  margin-top: -19rem;
+}
 .left-block, .middle-block, .right-block {
   height: 37rem;
   margin-top: 5rem;
   width: 35rem;
+}
+.middle-block {
+  margin-top: 18rem;
+}
+.right-block {
+  margin-top: 33rem;
 }
 .left-block > div {
   height: 11rem;
@@ -270,6 +283,7 @@ nav {
   justify-content: center;
   align-items: start;
   transform: translateY(3.5rem);
+  transform-style: preserve-3d;
 }
 .left-block > div::before {
   content: "";
@@ -300,13 +314,13 @@ nav {
   font-size: 2.9rem;
   font-weight: bold;
   color: #535353;
-  transform: translateY(0);
+  transform: translateY(0) translateZ(30px);
   transition: transform 0.7s ease-in-out;
   transition-delay: 0.6s;
   box-shadow: rgb(100 100 111 / 20%) 0rem .7rem 2.9rem 0rem;
 }
 .left-block > div > div.visible {
-  transform: translateY(-100%);
+  transform: translateY(-100%) translateZ(30px);
 }
 .left-block h4 {
   position: absolute;
@@ -371,6 +385,12 @@ nav {
   }
   #services-section {
     padding-top: 12rem;
+  }
+  #services-section > div {
+    margin-top: 0;
+  }
+  .middle-block, .right-block {
+    margin-top: 5rem;
   }
   .hero-container .row > div {
     align-items: center !important;
