@@ -72,7 +72,7 @@
       </div>
   </section>
   <section id="services-section">
-
+    <div id="canvas-globe" style="position: absolute;"></div>
     <div class="container d-flex justify-content-around align-items-center flex-wrap">
       <div class="left-block" style="z-index: 1;">
         <div class="mb-4" id="job-card-1">
@@ -119,6 +119,11 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/tilt.js"></script>
+  <script src="js/simplexNoisePDF.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" charset="utf-8"></script>
+  <script src="js/globe.js" charset="utf-8"></script>
   <script>
     $(function() {
       VanillaTilt.init(document.querySelector("#job-card-1"),{max: 25,	speed: 400, glare: false, "max-glare": 1});
