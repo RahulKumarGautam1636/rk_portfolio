@@ -6,7 +6,7 @@
     <title>Psychedelic Waves</title>
     <style media="screen">
       @import url('https://fonts.googleapis.com/css?family=Poppins:400,900');
-
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body{
       	overflow: hidden;
       }
@@ -19,6 +19,7 @@
         width:100%;
         height:100%;
         background: #FF4066;
+        overflow: hidden;
       }
 
       .title{
@@ -32,7 +33,7 @@
         letter-spacing: 1px;
         bottom: 40px;
         left: 40px;
-      	//display: none;
+      	display: none;
       }
 
       .remark{
@@ -64,13 +65,15 @@
         color:blue;
       	text-decoration: none;
       }
-      #myDiv {
+      .world::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(180deg,#f9f7ff 32.99%,rgba(249,247,255,.85) 56.18%,rgba(249,247,255,0) 100%);
+      /*  background: linear-gradient(180deg,#f9f7ff 32.99%,rgba(249,247,255,.85) 56.18%,rgba(249,247,255,0) 100%); */
+        background: linear-gradient(180deg,#f9f7ff 32.99%,rgba(249,247,255,.85) 56.18%,rgb(249 247 255 / 38%) 100%);
         backdrop-filter: blur(15px);
         z-index: 6;
         pointer-events: none;
@@ -78,11 +81,15 @@
       .dg.ac {
         z-index: 1111 !important;
       }
+      canvas {
+        transform: scale(4);
+        pointer-events: none;
+      }
     </style>
   </head>
   <body>
-    <div id="myDiv"></div>
-    <div id='test' class="world" style="transform: scale(4); pointer-events: none;"></div>
+    <!-- <div id="myDiv"></div> -->
+    <div id='test' class="world"></div>
 <div class="title">
 	<p>Looking at these waves for 1 minute<br/>will bring you 56% more serenity*</p>
 <p class="remark">* According to a very serious and reliable study conducted by myself.</p>
@@ -94,7 +101,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
-<script src="helper.js"></script>
+<script src="world.js"></script>
 <script type="x-shader/x-fragment" id="fragmentShader">
 	precision highp float;
 
@@ -251,7 +258,6 @@
 		float stroke = 0.001;
 		float smoothing = .0005;
 		d = smoothstep(radius, radius+smoothing, d) - smoothstep(radius+stroke, radius+stroke+smoothing, d);
-
 		col += d;// * 10.0;
 		*/
 
