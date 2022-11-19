@@ -1,6 +1,6 @@
 class World {
   constructor(width, height) {
-
+    console.log(width + ' ' + height);
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
       antialias: true });
@@ -70,10 +70,11 @@ class World {
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
   }
-  mouseMove(mousePos) {
-    this.targetMousePos.x = mousePos.px;
-    this.targetMousePos.y = mousePos.py;
-  }}
+  // mouseMove(mousePos) {
+  //   this.targetMousePos.x = mousePos.px;
+  //   this.targetMousePos.y = mousePos.py;
+  // }
+}
 ;
 
 document.addEventListener("DOMContentLoaded", domIsReady);
@@ -83,19 +84,26 @@ let gui = new dat.GUI();
 
 
 let parameters = {
-  speed: .2,
+  // speed: .2,
+  // hue: .5,
+  // hueVariation: 1,
+  // gradient: .3,
+  // density: .5,
+  // displacement: .66,
+  speed: .3,
   hue: .5,
   hueVariation: 1,
   gradient: .3,
   density: .5,
-  displacement: .66 };
+  displacement: .96
+ };
 
 
 
 function domIsReady() {
-  world = new World(this.container, this.renderer, document.getElementById('test').clientWidth, document.getElementById('test').clientWidth);
+  world = new World(this.container, this.renderer, window.innerWidth, window.innerHeight);
   window.addEventListener('resize', handleWindowResize, false);
-  document.addEventListener("mousemove", handleMouseMove, false);
+  // document.addEventListener("mousemove", handleMouseMove, false);
   handleWindowResize();
   world.loop();
   initGui();
@@ -143,13 +151,13 @@ function updateParameters() {
 }
 
 function handleWindowResize() {
-  world.updateSize(window.innerWidth, window.innerHeight);
+  world.updateSize(window.innerWidth, window.innerHeight);               // Divide width and hight by 2 to half the size of canvas.
 }
 
-function handleMouseMove(e) {
-  mousePos.x = e.clientX;
-  mousePos.y = e.clientY;
-  mousePos.px = mousePos.x / window.innerWidth;
-  mousePos.py = 1.0 - mousePos.y / window.innerHeight;
-  world.mouseMove(mousePos);
-}
+// function handleMouseMove(e) {                // Function for mouse interaction.
+//   mousePos.x = e.clientX;
+//   mousePos.y = e.clientY;
+//   mousePos.px = mousePos.x / window.innerWidth;
+//   mousePos.py = 1.0 - mousePos.y / window.innerHeight;
+//   world.mouseMove(mousePos);
+// }
