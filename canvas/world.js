@@ -151,7 +151,7 @@ function updateParameters() {
 }
 
 function handleWindowResize() {
-  world.updateSize(window.innerWidth, window.innerHeight);               // Divide width and hight by 2 to half the size of canvas.
+  world.updateSize(window.innerWidth/2, window.innerHeight/2);               // Divide width and hight by 2 to half the size of canvas.
 }
 
 // function handleMouseMove(e) {                // Function for mouse interaction.
