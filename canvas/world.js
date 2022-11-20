@@ -84,18 +84,12 @@ let gui = new dat.GUI();
 
 
 let parameters = {
-  // speed: .2,
-  // hue: .5,
-  // hueVariation: 1,
-  // gradient: .3,
-  // density: .5,
-  // displacement: .66,
-  speed: .3,
+  speed: .2,
   hue: .5,
   hueVariation: 1,
   gradient: .3,
   density: .5,
-  displacement: .96
+  displacement: .66
  };
 
 
