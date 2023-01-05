@@ -475,6 +475,16 @@
     		vec4 pos = vec4(position, 1.0);
     		gl_Position = pos;
     	}
+      
+      function increment(str) {
+          if (!str) return false;
+          let s = str.replace(/[0-9]/g, '');
+          if (str.length === s.length) return false;
+          let n = (parseInt(str.match(/\d/g).join("")) + 1).toString(); 
+          let newStr = s + '000000000'.substring(0, str.length - s.length -n.length) + n;   
+          return newStr;
+      }
+      console.log(increment('A0015'));
   </script>
   </body>
 </html>
