@@ -1,0 +1,31 @@
+.heading-primary {
+    font-size: clamp(40px, 7vw, 88px);
+    color: var(--text-color-3);
+    font-weight: 800;
+    font-family: 'Josefin Sans', 'Nunito', sans-serif;
+
+    & + p.text-1 {
+        max-width: 80rem;
+    }
+}
+
+.heading-secondary {
+    color: var(--text-color-4);
+    font-weight: 800;
+}
+
+.text-1 {
+    color: var(--text-color-2);
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.heading-tertiary {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color-4);
+}
+
+.sub-heading-1 {
+    color: var(--text-color-3);
+}

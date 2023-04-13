@@ -1,0 +1,87 @@
+#experience {
+    background: var(--bg-primary-1);
+
+    & .row {
+        text-align: center;
+
+        @media only screen and (max-width: 1170px) {
+            text-align: left;
+        }
+    }
+
+    & .heading-primary {
+        position: relative;
+
+        &.isNotHidden::before {
+            transform: scaleX(0);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: var(--text-color-3);
+            inset: 0;
+            transform: scaleX(1);
+            transform-origin: right;
+            transition: 2s;
+            // padding: 4rem 0 2rem;
+            // line-height: 1;
+            // border-radius: 10px;
+        }
+    }
+}
+
+.vertical-timeline::before {
+    background: var(--color-light) !important;
+}
+
+.vertical-timeline-element-content {
+    color: var(--text-color-4) !important;
+    // background: #d2f5ff;
+    background: var(--bg) !important;
+    border-radius: 15px !important;
+    // box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.5), 15px 15px 15px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: var(--box-shadow-2) !important;
+    transition: 0.2s;
+
+    &:hover {
+        // box-shadow: -20px -20px 30px rgba(255, 255, 255, 0.7), 20px 20px 30px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: var(--box-shadow-2-hover) !important;
+    }
+
+    & .vertical-timeline-element-content-arrow {
+        border-right: 15px solid var(--bg) !important;
+    }
+
+    .vertical-timeline-element-date {
+        font-size: 1.6rem !important;
+        font-weight: bold !important;
+    }
+
+    & h3 {
+        margin: 6px 0 12px;
+        font-size: 1.4rem;
+        width: fit-content;
+        padding: 0.8rem 1.8rem;
+        color: var(--clr);
+        font-weight: 700;
+        position: relative;
+        background: #c8f3ff;
+        overflow: hidden;
+        border-radius: 10px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: var(--clr);
+            opacity: 0.20;
+        }
+    }
+
+    & li {
+        margin-bottom: 12px;
+        font-family: 'Josefin Sans';
+        color: var(--text-color-2);
+    }
+}

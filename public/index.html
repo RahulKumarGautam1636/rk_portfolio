@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://use.fontawesome.com/9d8bad7607.js"></script>
+    <!-- <link href="https://use.fontawesome.com/9d8bad7607.css" media="all" rel="stylesheet"> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <style>
+      :root { 
+
+        --hsla-h: 50;
+        --hsla-w: 50;
+        --hsla-b: 50;
+
+        /* static colors */
+        --color-light: #fff;
+        --color-dark: #000;
+
+        --bg-primary-1: linear-gradient(180deg, #C9F2FF 0%, #E6FCFF 96.63%);          
+        --bg-primary-2: linear-gradient(0deg, #C9F2FF 0%, #E6FCFF 96.63%);           
+
+        --color-1: #583B15;
+        --color-2: #245663;
+        --color-3: #0dcaf0;
+        --color-4: #85DCFF;
+        --color-5: rgb(255, 217, 167);
+        --color-6: hsla(317, 100%, 58%, 1);
+        --color-7: hsla(252, 100%, 67%, 1);
+        --color-8: hsla(345, 100%, 65%, 1);
+        --color-9: hsla(175, 100%, 36%, 1);
+        /* --drop-shadow: inset 20px 20px 20px rgba(0, 0, 0, .05), 25px 35px 20px rgba(0, 0, 0, .05), 25px 30px 30px rgba(0, 0, 0, .05), inset -20px -20px 25px rgba(255, 255, 255, .9);  */
+        --drop-shadow: inset -20px 20px 20px rgba(0, 0, 0, .05), -25px 35px 20px rgba(0, 0, 0, .05), -25px 30px 30px rgba(0, 0, 0, .05), inset 20px -20px 25px rgba(255, 255, 255, .9);
+
+        --text-color-1: #707070;
+        --text-color-2: #585858;
+        --text-color-3: #f6aa44;
+        --text-color-4: #245663;
+        --text-color-hover: #DBDB31;
+
+        /* experience card colors */
+        --bg: #c8f3ff;
+        --box-shadow-2: -10px -10px 10px rgba(255, 255, 255, 0.5), 15px 15px 15px rgb(129, 228, 255);
+        --box-shadow-2-hover: -20px -20px 30px rgba(255, 255, 255, 0.5), 20px 20px 30px rgb(133, 228, 255);
+        /* --box-shadow-2: 0.8rem 0.8rem 0.6rem #c8d0e7, -0.8rem -0.8rem 0.5rem #ffffffa1;
+        --box-shadow-2-hover: 1.6rem 1.6rem 1.2rem #c8d0e7, -1.6rem -1.6rem 1rem #ffffffa1; */
+
+        /* tech section */
+        --box-shadow-3: 0 0 1em #ffffff8f;
+      }
+
+      .dark-theme {
+        /* --bg-primary-1: linear-gradient(180deg, #1a1a1a 0%, #272727 96.63%);
+        --bg-primary-2: linear-gradient(0deg, #1a1a1a 0%, #272727 96.63%); */
+
+        /* --bg-primary-1: #333333;
+        --bg-primary-2: #333333; */
+
+        --bg-primary-1: #261d56;
+        --bg-primary-2: #261d56;
+
+        --text-color-1: rgb(255, 255, 255);
+        --text-color-2: rgb(255, 255, 255);
+        --text-color-4: var(--color-3);
+        /* --drop-shadow: inset 20px 20px 45px rgb(144 144 144 / 58%), 25px 35px 20px rgb(0 0 0 / 14%), 25px 38px 30px rgb(0 0 0 / 50%), inset -20px -20px 58px rgb(167 167 167 / 82%); */
+        --drop-shadow: inset -20px 20px 45px rgb(144 144 144 / 58%), -25px 35px 20px rgb(0 0 0 / 14%), -25px 38px 30px rgb(0 0 0 / 50%), inset 20px -20px 58px rgb(167 167 167 / 82%);
+
+        /* experience card colors */
+        /* --bg: #393939;
+        --box-shadow-2: -10px -10px 10px rgb(83 83 83 / 50%), 15px 15px 15px rgb(43 43 43);
+        --box-shadow-2-hover: -20px -20px 30px rgb(83 83 83 / 50%), 20px 20px 30px rgb(43 43 43); */
+
+        --bg: #251d54;
+        --box-shadow-2: -10px -10px 10px rgb(49 38 118), 15px 15px 15px rgb(14 11 33);
+        --box-shadow-2-hover: -20px -20px 30px rgb(49 38 118), 20px 20px 30px rgb(14 11 33);
+
+
+
+        /* tech section */
+        --box-shadow-3: 0 0 1em #0000005c;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <script src="JS/jquery.min.js"></script>
+    <!-- <script src="JS/fancybox.umd.js"></script> -->
+    <script src="JS/pixi.min.501.js"></script>
+    <script src="JS/tilt.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script> -->
+    <!-- <script src="JS/parallaxJS.js"></script> -->
+    <!-- <script src="JS/heroCanvas.js" type="module"></script> -->
+    <script src="JS/dat.gui.min.js"></script>
+    <script src="JS/materialize.min.js"></script>
+    <script src="JS/custom.js"></script>
+
+    <script type='module'>
+      import {renderCanvas} from '/JS/heroCanvas.js';
+      window.renderCanvas = renderCanvas;
+    </script>
+  </body>
+</html>

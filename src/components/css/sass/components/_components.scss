@@ -1,0 +1,121 @@
+.slideBtn {
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    padding: .7rem 3rem;
+    border-radius: .5rem;
+    transition: 0.5s;
+    color: #707070;
+    /* background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%); */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: .2rem solid #cfcfcf;
+    background: white;
+
+    &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        background: linear-gradient(42deg, #ff2a2a, #ec4bff);
+        transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+        color: white;
+        border: .2rem solid transparent;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+  }
+
+  .btn-hireMe {
+    max-width: 21rem !important;
+    width: 100%;
+    position: relative;
+    outline: none;
+    font-size: 2.3rem !important;
+    font-weight: 600 !important;
+    border-radius: 0.7rem !important;
+    padding: 0.9rem 0 !important;
+    transition: 0.15s !important;
+
+    &:active {
+        transform: translateY(0) !important;
+        box-shadow: 0 0.5rem 10rem rgba(0, 0, 0, 0.2) !important;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+        &::after {
+            opacity: 0;
+            transform: scaleX(2) scaleY(1.5);
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: white;
+        z-index: -1;
+        border-radius: 1rem;
+        opacity: 0.7;
+        transition: 0.3s linear;
+        pointer-events: none;
+    }
+
+}
+
+canvas {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+.section-padding {
+    padding: 12rem 0 4rem;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#modern-black {
+    stroke: orangered;
+}
+#modern-gray {
+    stroke: green;
+}
+
+.container {
+    @media only screen and (max-width: $bp-medium) {
+       padding-left: 5vw !important;
+       padding-right: 5vw !important;
+    }
+}
+
+.dg.ac {
+    z-index: 10;
+}
+
+
+

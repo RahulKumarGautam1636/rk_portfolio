@@ -1,0 +1,224 @@
+#techStack {
+
+    // & .tech-card {
+    //     width: auto;
+    //     padding: 2rem;
+        
+    //     & span {
+    //         background-size: cover;
+    //         background-image: url(../assets/img/bg/circles.png);
+    //         position: absolute;
+    //         inset: 0;
+    //     }
+
+    //     & img {
+    //         height: 16rem;
+    //     }
+    // }
+
+    font-size: 1rem;
+    background: var(--bg-primary-2);
+
+    & ul {
+        display: flex;
+        /* background: #5a175b; */
+        background: transparent;
+        /* height: 150px; */
+        padding: 1em;
+        margin: 2em 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10em;
+        row-gap: 14em;
+
+        & li {
+            list-style: none;
+
+            & > div {
+                height: 10em;
+                width: 10em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                transform: rotateZ(-25deg) skew(25deg);
+
+                &:hover {
+                    z-index: 2;
+                }
+
+                & .fa {
+                    background: var(--color);
+                    width: 100%;
+                    height: 100%;
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                    transition-delay: 0.9s;
+                    transition: 0.4s;
+                    // box-shadow: 0 0 1em rgba(0,0,0,0.5);
+                    // box-shadow: 0 0 1em rgb(125, 229, 255);
+                    box-shadow: var(--box-shadow-3);
+                    z-index: 10;
+                    backface-visibility: hidden;
+                }
+
+                & .walls {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        height: 100%;
+                        width: 0.7em;
+                        transform-origin: left;
+                        transform: skewY(135deg) translate(-0.7em);
+                        // background: rgba(64, 64, 64, 0.4);
+                        // background: rgb(29, 227, 255);
+                        background: var(--color);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0.25em;
+                        width: 100%;
+                        height: 0.7em;
+                        transform-origin: left;
+                        transform: skewX(-45deg) translateY(0.6em);
+                        // background: rgba(60, 60, 60, 0.18);
+                        // background: rgb(26, 208, 233);
+                        background: var(--color)
+                    }
+                }
+
+                & .layer {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    // box-shadow: 0 0 1em rgba(0,0,0,0.5);
+                    box-shadow: var(--box-shadow-3);
+                    opacity: 0;
+                }
+
+                & .layer0 {
+                    // background: rgba(255, 255, 255, 0.05);
+                    // background: rgb(88, 231, 255);
+                    background: var(--color);
+                    transition: 0.5s;
+                    opacity: 0.7;
+                }
+
+                .layer2 {
+                    transition: 0.5s;
+                    z-index: 8;
+                }
+
+                .layer3 {
+                    transition: 0.5s;
+                    z-index: 6;
+                }
+
+                .layer4 {
+                    transition: 0.5s;
+                    z-index: 4;
+                }
+
+                &:hover .fa {
+                    transform: translate(10rem, -10rem);
+                    // background: #0077B5;
+                }
+
+                &:hover .layer2 {
+                    transform: translate(7.5em, -7.5em);
+                    opacity: 0.8;
+                }
+
+                &:hover .layer3 {
+                    transform: translate(5em, -5em);
+                    opacity: 0.5;
+                }
+
+                &:hover .layer4 {
+                    transform: translate(2.5em, -2.5em);
+                    opacity: 0.2;
+                }
+            }
+
+        }
+        
+    }
+}
+
+.layer2, .layer3, .layer4 {
+    background: var(--color);
+}
+
+// .css .layer2, .css .layer3, .css .layer4 {
+//     background: #0077B5;
+// }
+
+// .js .layer2, .js .layer3, .js .layer4 {
+//     background: #e4405f;
+// }
+
+// .reactjs .layer2, .reactjs .layer3, .reactjs .layer4 {
+//     background: #25D366;
+// }
+
+// .sass .layer2, .sass .layer3, .sass .layer4 {
+//     background: #55acee;
+// }
+
+// .redux .layer2, .redux .layer3, .redux .layer4 {
+//     background: #55acee;
+// }
+
+// .bootstrap .layer2, .bootstrap .layer3, .bootstrap .layer4 {
+//     background: #55acee;
+// }
+
+// .threejs .layer2, .threejs .layer3, .threejs .layer4 {
+//     background: #55acee;
+// }
+
+// .nodejs .layer2, .nodejs .layer3, .nodejs .layer4 {
+//     background: #55acee;
+// }
+
+// .mongoDb .layer2, .mongoDb .layer3, .mongoDb .layer4 {
+//     background: #55acee;
+// }
+
+// ----------------------------------------------------------------------------------------------------------
+
+// :root {
+//     // --color-main: hwb(317deg 16% 0%) !important;
+//     --color-main: #55acee;
+// }
+
+// li#threejs::before {
+//     background: var(--color);
+// }
+// li#threejs::after {
+//     background: var(--color);
+// }
+// li#threejs .layer0 {
+//     background: var(--color) !important;
+// }
+// #threejs.threejs .layer2, #threejs.threejs .layer3, #threejs.threejs .layer4 {
+//     background: var(--color);
+// }
+// #threejs .walls::before {
+//     background: var(--color) !important;
+// }
+// #threejs .walls::after {
+//     background: var(--color) !important;
+// }

@@ -1,0 +1,89 @@
+#earth-section {
+    // background: var(--bg-primary-2);
+    // background: #000;
+    z-index: 1;
+    position: relative;
+
+    .starsCanvas {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+
+    .left-block {
+        height: 37rem;
+        margin-top: 12rem;
+        width: 100%;
+        // width: 35rem;
+        max-width: 44rem;
+        font-family: 'Josefin Sans';
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 10rem;
+        }
+    }
+
+    .left-block > div {
+        height: 11rem;
+        background: #85DCFF;
+        border-radius: 1rem;
+        position: relative;
+        // z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateY(3.5rem);
+        transform-style: preserve-3d;
+    }
+
+    .left-block > div::before {
+        content: "";
+        height: 107%;
+        width: 84%;
+        background: #f7f7f7;
+        background: white;
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: transform 0.3s;
+        transition-delay: 0.4s;
+        transform: translate(-50%, -54%) translateZ(10px);
+        border-radius: 1rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0rem .7rem 2.9rem 0rem;
+    }
+    .left-block > div.visible::before {
+        transform: translate(-50%, -79%) translateZ(10px);
+    }
+    .left-block > div > div {
+        background: white;
+        display: inline;
+        padding: 1.1rem 1.5rem;
+        z-index: 100;
+        border-radius: 50%;
+        border: 1rem solid #FFD9A7;
+        font-size: 2.9rem;
+        font-weight: bold;
+        color: #535353;
+        transform: translateY(0) translateZ(30px);
+        transition: transform 0.7s ease-in-out;
+        transition-delay: 0.6s;
+        box-shadow: rgba(100, 100, 111, 0.2) 0rem .7rem 2.9rem 0rem;
+    }
+    .left-block > div > div.visible {
+        transform: translateY(-100%) translateZ(30px);
+    }
+    .left-block h4 {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -79%) translateZ(15px);
+        white-space: nowrap;
+        font-size: 2.2rem;
+        color: gray;
+        font-weight: bold;
+    }
+    .left-block > div > div.visible {
+        transform: translateY(-100%) translateZ(30px);
+    }
+}

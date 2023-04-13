@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem !important;
+    font-family: 'Nunito', sans-serif !important;
+    scroll-behavior: smooth;
+    // filter: brightness(0.2);
+}
+
+p {
+    font-family: 'Josefin Sans', sans-serif !important;
+    // font-family: 'Nunito', 'Josefin Sans', sans-serif !important;
+}
+
+a, button {
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50.5%;
+    }
+}
