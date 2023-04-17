@@ -4,6 +4,7 @@ import Overview from "./overview";
 import Experience from "./Experience";
 import TechStack from "./techStack";
 import Projects from "./projects";
+import Contact from "./contact";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Experience/>
             <TechStack/>
             <Projects/>
+            <Contact/>
         </>
     )
 }
