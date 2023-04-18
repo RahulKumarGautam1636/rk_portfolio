@@ -23,11 +23,11 @@ const Contact = ({ theme }) => {
 
                     </div>
                     <div className='col contact-mockup d-flex justify-content-center align-items-center'>
-                        <div class="circle">
+                        <div className="circle">
                             <img className='mobile-mockup img-fluid' src='assets/img/mobile_mockup.png' alt='mobile-mockup'/>
-                            <span class="circle__btn"></span>
-                            <span class="circle__back-1"></span>
-                            <span class="circle__back-2"></span>
+                            <span className="circle__btn"></span>
+                            <span className="circle__back-1"></span>
+                            <span className="circle__back-2"></span>
                         </div>
                     </div>
                 </div>

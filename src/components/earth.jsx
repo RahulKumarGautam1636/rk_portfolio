@@ -22,7 +22,7 @@ useEffect(() => {
                             <div className="left-block" style={{zIndex: 1}}>
                                 <div className="mb-4" id="job-card-1">
                                     <div id="job-card-1-count" style={{border: '10px solid #85DCFF'}}><CountUp end={20} enableScrollSpy scrollSpyDelay={1000}/></div>
-                                    <h4>Jobs Done Successfully</h4>
+                                    <h4>Months of Experience</h4>
                                 </div>
                                 <div id="job-card-2" style={{background: '#FFD9A7', marginTop: '11.5rem'}}>
                                     <div id="job-card-2-count"><CountUp end={30} enableScrollSpy scrollSpyDelay={1000}/></div>
