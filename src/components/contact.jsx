@@ -20,7 +20,7 @@ const Contact = ({ theme }) => {
 
                 <div className='row row-cols-1 row-cols-md-2 px-2'>
                     <div className='col contact-details'>
-
+                        
                     </div>
                     <div className='col contact-mockup d-flex justify-content-center align-items-center'>
                         <div className="circle">

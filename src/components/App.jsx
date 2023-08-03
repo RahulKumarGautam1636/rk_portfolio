@@ -8,6 +8,7 @@ import { themeAction } from '../actions';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import "aos/dist/aos.css";
+import { ScreenLoader } from './utils';
 // import './css/materialize.min.css';
 
 
@@ -25,7 +26,7 @@ const App = ({ theme }) => {
     return (
         <div className={theme}>
             <HashRouter>
-            {/* {isLoading && <div className='spinner-container'><GlobalLoader/></div>} */}
+            <div className='spinner-container'><ScreenLoader/></div>
             <Header/>
             {/* <BottomNav/> */}
             {/* <ScrollToTop/> */}
