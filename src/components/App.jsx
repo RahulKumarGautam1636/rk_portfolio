@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import './css/styles.css';
 import Header from "./header";
@@ -6,13 +5,15 @@ import Home from './home';
 import { connect } from 'react-redux';
 import { themeAction } from '../actions';
 import AOS from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "aos/dist/aos.css";
 import { ScreenLoader } from './utils';
 // import './css/materialize.min.css';
 
 
 const App = ({ theme }) => {
+
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         AOS.init({
@@ -23,10 +24,22 @@ const App = ({ theme }) => {
         AOS.refresh();
     }, []);
 
+    useEffect(() => {
+        const doSomething = () => {
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 5000)
+        };
+        window.addEventListener("load", doSomething);
+        return () => {
+        window.removeEventListener("load", doSomething);
+        };
+    }, []);
+
     return (
         <div className={theme}>
             <HashRouter>
-            <div className='spinner-container'><ScreenLoader/></div>
+            {isLoading && <div className='spinner-container'><ScreenLoader/></div>}
             <Header/>
             {/* <BottomNav/> */}
             {/* <ScrollToTop/> */}
