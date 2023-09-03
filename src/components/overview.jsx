@@ -14,12 +14,12 @@ const Overview = ({ theme }) => {
     const [lightOn, setLightOn] = useState(false);
     // style={{background: lightOn ? 'var(--bg-primary-1)' : '#131313'}}
     return (
-        <section id="overview" className='section-padding' style={{filter: lightOn || theme === 'light-theme' ? 'brightness(1)' : 'brightness(0.2)'}}>
+        <section id="overview" data-scroll-section className='section-padding' style={{filter: lightOn || theme === 'light-theme' ? 'brightness(1)' : 'brightness(0.2)'}}>
             <div className="container">
                 <div className="row">
-                    <h3 className='heading-secondary' data-aos="fade-right">INTRODUCTION</h3>
-                    <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='200'>OVERVIEW..</h1>
-                    <p className='text-1' data-aos='fade-up' data-aos-delay='350'>
+                    <h3 className='heading-secondary' data-scroll data-scroll-speed="1">INTRODUCTION</h3>
+                    <h1 className='heading-primary' data-scroll data-scroll-speed="2">OVERVIEW..</h1>
+                    <p className='text-1'>
                         I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React,
                         Node.js and ThreeJS. I'm a quick learner and collaborate closely with clients to create efficient, scaleble and user-friendly solutions that solve real-world problems.
                         Let work together to bring ideas to life.
@@ -49,7 +49,7 @@ const Overview = ({ theme }) => {
                 </div>
             </div>
             <div className={`drop-cards container d-flex flex-column flex-lg-row justify-content-center align-items-center ${theme === 'light-theme' || lightOn ? 'active' : ''}`}>
-                <div className='card-wrapper'data-aos="fade-left">
+                <div className='card-wrapper'>
                     <div className="drop left" style={{'--clr': '#ff0f5b'}}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">
@@ -64,7 +64,7 @@ const Overview = ({ theme }) => {
                         <span className='drop-reflection big'></span>
                     </div>
                 </div>
-                <div className='card-wrapper'data-aos="fade-up">
+                <div className='card-wrapper'>
                     <div className="drop middle" style={{'--clr': '#be01fe', backgroundImage : theme === 'light-theme' ? `url(${Screenshot4})` : ''}} onClick={() => window.initPixi('#overview', 'https://tse3.mm.bing.net/th?id=OIP.JSbdSoh5Wq-BMbDl2BUluAHaE5&pid=Api&P=0')}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">
@@ -78,7 +78,7 @@ const Overview = ({ theme }) => {
                         <span className='drop-reflection big'></span>
                     </div>
                 </div>
-                <div className='card-wrapper'data-aos="fade-right">
+                <div className='card-wrapper'>
                     <div className="drop right" style={{'--clr': '#01b4ff'}}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">

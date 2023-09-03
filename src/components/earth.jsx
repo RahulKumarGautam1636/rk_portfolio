@@ -11,10 +11,10 @@ useEffect(() => {
 },[])
 
     return (
-        <section id="earth-section" className='section-padding' style={{background: theme === 'dark-theme' ? '#140c3d' : 'var(--bg-primary-2)'}}>
+        <section id="earth-section" data-scroll-section className='section-padding' style={{background: theme === 'dark-theme' ? '#140c3d' : 'var(--bg-primary-2)'}}>
             {/* <div className="container"> */}
                 <div className="row">
-                    <div className="col col-12 col-lg-8" data-aos="fade-right" data-aos-delay='300' style={{minHeight: '60rem'}}>
+                    <div className="col col-12 col-lg-8" style={{minHeight: '60rem'}}>
                         <EarthCanvas/>
                     </div>
                     <div className="col col-12 col-lg-4">

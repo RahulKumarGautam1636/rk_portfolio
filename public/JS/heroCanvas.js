@@ -44,7 +44,7 @@ export const renderCanvas = () => {
     let pts = new Array(50000).fill().map(p => {
         sizes.push(Math.random() * 1.5 + 0.5);
         pushShift();
-        return new THREE.Vector3().randomDirection().multiplyScalar(Math.random() * 0.5 + 9.5);
+        return new THREE.Vector3().randomDirection().multiplyScalar(Math.random() * 0.5 + 9.5);         // this sets particle globe.
     })
     for(let i = 0; i < 100000; i++){
         let r = 10, R = 40;
@@ -134,7 +134,13 @@ export const renderCanvas = () => {
     // scene.add(lightHelper);
 
     let clock = new THREE.Clock();
-
+    function clamp(num, min, max) {
+        return num <= min 
+            ? min 
+            : num >= max 
+            ? max 
+            : num
+    }
     renderer.setAnimationLoop(() => {
         controls.update();
         let t = clock.getElapsedTime() * 0.5;
@@ -142,6 +148,7 @@ export const renderCanvas = () => {
         p.rotation.y = t * 0.05;
         // p.rotation.z = t * 0.05;
         moon.rotation.y += 0.002; 
+        // camera.position.set(0, clamp((Math.sin(1 * t ) * 5), -5, 5), 50);
         renderer.render(scene, camera);
     });
 

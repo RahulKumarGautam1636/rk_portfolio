@@ -1,122 +1,128 @@
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 import './css/timeline.style.min.css';
+import { useEffect } from 'react';
 
 
 const Experience = () => {
 
+    useEffect(() => {
+        window.initMatrix();
+    },[])
+
     return (
       <>
-      <section id='experience' className='section-padding'>
-          <div className="container">
-              <div className="row">
-                  <h3 className='heading-secondary'>WHAT I HAVE DONE SO FAR</h3>
-                  <h1 className='heading-primary'>WORK EXPERIENCE</h1>
-                  {/* <p className='text-1 mw-75'>
-                      I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React,
-                      Node.js and ThreeJS. I'm a quick learner and collaborate closely with clients to create efficient, scaleble and user-friendly solutions that solve real-world problems.
-                      Let work together to bring ideas to life.
-                  </p> */}
-              </div>
-          </div>
-    
-          <div className='mt-20 flex flex-col'>
+      <section id='experience' className='section-padding position-relative'>
+        <canvas className='background'></canvas>
+        <div className="container">
+            <div className="row">
+                <h3 className='heading-secondary'>WHAT I HAVE DONE SO FAR</h3>
+                <h1 className='heading-primary'>WORK EXPERIENCE</h1>
+                {/* <p className='text-1 mw-75'>
+                    I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React,
+                    Node.js and ThreeJS. I'm a quick learner and collaborate closely with clients to create efficient, scaleble and user-friendly solutions that solve real-world problems.
+                    Let work together to bring ideas to life.
+                </p> */}
+            </div>
+        </div>
 
-          <div className="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns">
-    <div id="" className="timeline-card-1 vertical-timeline-element"><span className="vertical-timeline-element-icon bounce-in"
-            style={{background: 'rgb(56, 62, 86)'}}>
-            <div className="flex justify-center items-center w-full h-full"><img src="assets/company/starbucks.png"
-                    alt="Versicle Institute of Technology" className="img-fluid"/></div>
-        </span>
-        <div className="vertical-timeline-element-content bounce-in">
-            <div className="vertical-timeline-element-content-arrow"></div>
-            <div>
+        <div className='mt-20 flex flex-col'>
+
+        <div className="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns">
+        <div id="" className="timeline-card-1 vertical-timeline-element"><span className="vertical-timeline-element-icon bounce-in"
+                style={{background: 'rgb(56, 62, 86)'}}>
+                <div className="flex justify-center items-center w-full h-full"><img src="assets/company/starbucks.png"
+                        alt="Versicle Institute of Technology" className="img-fluid"/></div>
+            </span>
+            <div className="vertical-timeline-element-content bounce-in">
+                <div className="vertical-timeline-element-content-arrow"></div>
                 <div>
-                    <h4 className="heading-tertiary">React.js Developer</h4>
-                    <h3 className="sub-heading-1" style={{"--clr": "var(--color-6)"}}>Versicle Institute of Technology</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>Collaborating with cross-functional teams including designers, product managers, and other
-                            developers to create high-quality products.</li>
-                        <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
-                        <li>Participating in code reviews and providing constructive feedback to other developers.</li>
-                    </ul>
-                </div>
-            </div><span className="vertical-timeline-element-date">March 2020 - April 2021</span>
+                    <div>
+                        <h4 className="heading-tertiary">React.js Developer</h4>
+                        <h3 className="sub-heading-1" style={{"--clr": "var(--color-6)"}}>Versicle Institute of Technology</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Collaborating with cross-functional teams including designers, product managers, and other
+                                developers to create high-quality products.</li>
+                            <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
+                            <li>Participating in code reviews and providing constructive feedback to other developers.</li>
+                        </ul>
+                    </div>
+                </div><span className="vertical-timeline-element-date">March 2020 - April 2021</span>
+            </div>
         </div>
-    </div>
-    <div id="" className="timeline-card-2 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
-            style={{background: 'rgb(230, 222, 221)'}}>
-            <div className="flex justify-center items-center w-full h-full"><img src="assets/company/tesla.png"
-                    alt="Gbooks Infotech Private Limited" className="img-fluid"/></div>
-        </span>
-        <div className="vertical-timeline-element-content is-hidden">
-            <div className="vertical-timeline-element-content-arrow"></div>
-            <div>
+        <div id="" className="timeline-card-2 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
+                style={{background: 'rgb(230, 222, 221)'}}>
+                <div className="flex justify-center items-center w-full h-full"><img src="assets/company/tesla.png"
+                        alt="Gbooks Infotech Private Limited" className="img-fluid"/></div>
+            </span>
+            <div className="vertical-timeline-element-content is-hidden">
+                <div className="vertical-timeline-element-content-arrow"></div>
                 <div>
-                    <h4 className="heading-tertiary">React Native Developer</h4>
-                    <h3 className="sub-heading-1" style={{"--clr": "var(--color-7)"}}>Gbooks Infotech Private Limited</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>Developing and maintaining web applications using React.js and other related technologies.
-                        </li>
-                        <li>Collaborating with cross-functional teams including designers, product managers, and other
-                            developers to create high-quality products.</li>
-                        <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
-                    </ul>
-                </div>
-            </div><span className="vertical-timeline-element-date">Jan 2021 - Feb 2022</span>
+                    <div>
+                        <h4 className="heading-tertiary">React Native Developer</h4>
+                        <h3 className="sub-heading-1" style={{"--clr": "var(--color-7)"}}>Gbooks Infotech Private Limited</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Developing and maintaining web applications using React.js and other related technologies.
+                            </li>
+                            <li>Collaborating with cross-functional teams including designers, product managers, and other
+                                developers to create high-quality products.</li>
+                            <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
+                        </ul>
+                    </div>
+                </div><span className="vertical-timeline-element-date">Jan 2021 - Feb 2022</span>
+            </div>
         </div>
-    </div>
-    <div id="" className="timeline-card-3 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
-            style={{background: 'rgb(56, 62, 86)'}}>
-            <div className="flex justify-center items-center w-full h-full"><img src="assets/company/shopify.png"
-                    alt="Shopify" className="img-fluid"/></div>
-        </span>
-        <div className="vertical-timeline-element-content is-hidden">
-            <div className="vertical-timeline-element-content-arrow"></div>
-            <div>
+        <div id="" className="timeline-card-3 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
+                style={{background: 'rgb(56, 62, 86)'}}>
+                <div className="flex justify-center items-center w-full h-full"><img src="assets/company/shopify.png"
+                        alt="Shopify" className="img-fluid"/></div>
+            </span>
+            <div className="vertical-timeline-element-content is-hidden">
+                <div className="vertical-timeline-element-content-arrow"></div>
                 <div>
-                    <h4 className="heading-tertiary">Web Developer</h4>
-                    <h3 className="sub-heading-1" style={{"--clr": "var(--color-8)"}}>Shopify</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>Developing and maintaining web applications using React.js and other related technologies.
-                        </li>
-                        <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
-                        <li>Participating in code reviews and providing constructive feedback to other developers.</li>
-                    </ul>
-                </div>
-            </div><span className="vertical-timeline-element-date">Jan 2022 - Jan 2023</span>
+                    <div>
+                        <h4 className="heading-tertiary">Web Developer</h4>
+                        <h3 className="sub-heading-1" style={{"--clr": "var(--color-8)"}}>Shopify</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Developing and maintaining web applications using React.js and other related technologies.
+                            </li>
+                            <li>Implementing responsive design and ensuring cross-browser compatibility.</li>
+                            <li>Participating in code reviews and providing constructive feedback to other developers.</li>
+                        </ul>
+                    </div>
+                </div><span className="vertical-timeline-element-date">Jan 2022 - Jan 2023</span>
+            </div>
         </div>
-    </div>
-    <div id="" className="timeline-card-4 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
-            style={{background: 'rgb(230, 222, 221)'}}>
-            <div className="flex justify-center items-center w-full h-full"><img src="assets/company/meta.png" alt="Meta"
-                    className="img-fluid"/></div>
-        </span>
-        <div className="vertical-timeline-element-content is-hidden">
-            <div className="vertical-timeline-element-content-arrow"></div>
-            <div>
+        <div id="" className="timeline-card-4 vertical-timeline-element"><span className="vertical-timeline-element-icon is-hidden"
+                style={{background: 'rgb(230, 222, 221)'}}>
+                <div className="flex justify-center items-center w-full h-full"><img src="assets/company/meta.png" alt="Meta"
+                        className="img-fluid"/></div>
+            </span>
+            <div className="vertical-timeline-element-content is-hidden">
+                <div className="vertical-timeline-element-content-arrow"></div>
                 <div>
-                    <h4 className="heading-tertiary">Full stack Developer</h4>
-                    <h3 className="sub-heading-1" style={{"--clr": "var(--color-9)"}}>Meta</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>Developing and maintaining web applications using React.js and other related technologies.
-                        </li>
-                        <li>Collaborating with cross-functional teams including designers, product managers, and other
-                            developers to create high-quality products.</li>
-                        <li>Participating in code reviews and providing constructive feedback to other developers.</li>
-                    </ul>
-                </div>
-            </div><span className="vertical-timeline-element-date">Jan 2023 - Present</span>
+                    <div>
+                        <h4 className="heading-tertiary">Full stack Developer</h4>
+                        <h3 className="sub-heading-1" style={{"--clr": "var(--color-9)"}}>Meta</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Developing and maintaining web applications using React.js and other related technologies.
+                            </li>
+                            <li>Collaborating with cross-functional teams including designers, product managers, and other
+                                developers to create high-quality products.</li>
+                            <li>Participating in code reviews and providing constructive feedback to other developers.</li>
+                        </ul>
+                    </div>
+                </div><span className="vertical-timeline-element-date">Jan 2023 - Present</span>
+            </div>
         </div>
-    </div>
 </div>
 
 

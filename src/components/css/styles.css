@@ -579,7 +579,15 @@ header {
           top: 0;
           left: 0;
           height: 100%;
-          width: 100%; }
+          width: 100%;
+          display: flex; }
+          #techStack ul li > div .walls span {
+            font-size: 1.5em;
+            color: white;
+            z-index: 5;
+            position: relative;
+            margin: auto auto 0;
+            text-transform: uppercase; }
           #techStack ul li > div .walls::before {
             content: '';
             position: absolute;

@@ -17,16 +17,16 @@ const Hero = ({ theme }) => {
     },[theme, isCanvasInitialised])  
 
     return (
-        <section id="hero" className="position-relative">
+        <section id="hero" data-scroll-section className="position-relative">
          {/* <canvas id="canvas" style={{position: absolute; top: 0; left: 0; cursor: none}}></canvas>  */}
         <div id='test' className="world"></div>
         <div className="hero-container container">
           <div className="row row-cols-1 row-cols-md-2 px-2" style={{zIndex: 2}}>
             <div className="order-2 order-md-1 col d-flex flex-column justify-content-center align-items-start pb-5 mt-5 mt-lg-0 position-relative">
               {/* <img id="emojiSmily" className="floating-image" src="assets/img/emojiSmily.png" alt="emojiSmily"/>  */}
-              <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='300'>Hy! I Am<br/>
+              <h1 className='heading-primary'>Hy! I Am<br/>
                 R. K. Gautam</h1>
-              <p data-aos="fade-right" data-aos-delay='300'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum has been the. Lorem Ipsum has been the.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum has been the. Lorem Ipsum has been the.</p>
               <button id="hireMe" className="btn btn-lg btn-info text-white btn-hireMe pe-auto moveInBottom" type="button" name="button">Hire Me</button>
             </div>
             <div id="hero-image" className="order-1 order-md-2 col d-flex justify-content-center align-items-center position-relative" style={{transformStyle: 'preserve-3d'}}>
