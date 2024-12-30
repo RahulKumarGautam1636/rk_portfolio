@@ -10,9 +10,9 @@ const Contact = ({ theme }) => {
         <section id="contact">
             <div className="container">
                 <div className="row">
-                    <h3 className='heading-secondary'> GET IN TOUCH</h3>
-                    <h1 className='heading-primary'>CONTACT ME..</h1>
-                    <p className='text-1'>
+                    <h3 className='heading-secondary' data-aos="fade-right"> GET IN TOUCH</h3>
+                    <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='200'>CONTACT ME..</h1>
+                    <p className='text-1' data-aos='fade-up' data-aos-delay='350'>
                         Following Contact showcases my skills and experience through rea-world examples of my work. Each project is briefly described with links to code repositories and live demos in it.
                         It reflects my ability to solve complex problems, work with different technologies and manage project effectively.
                     </p>

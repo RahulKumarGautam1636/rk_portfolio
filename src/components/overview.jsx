@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { useState } from 'react';
-import Screenshot4 from './assets/img/bg/Screenshot4.png'
+import { useRef, useState } from 'react';
+import Screenshot4 from './assets/img/bg/Screenshot4.png';
+import { ReactDOM } from 'react';
 // import AOS from 'aos';
 
 
@@ -11,23 +12,31 @@ const Overview = ({ theme }) => {
     //     AOS.init();
     // },[])
 
+    const lightRef = useRef();
+
+    const handleLight = () => {
+        const x = lightRef;
+        // const y = ReactDOM.findDOMNode(lightRef.current);
+        console.log(x);
+    }
+
     const [lightOn, setLightOn] = useState(false);
     // style={{background: lightOn ? 'var(--bg-primary-1)' : '#131313'}}
     return (
-        <section id="overview" data-scroll-section className='section-padding' style={{filter: lightOn || theme === 'light-theme' ? 'brightness(1)' : 'brightness(0.2)'}}>
+        <section id="overview" className='section-padding' style={{filter: lightOn || theme === 'light-theme' ? 'brightness(1)' : 'brightness(0.2)'}}>
             <div className="container">
                 <div className="row">
-                    <h3 className='heading-secondary' data-scroll data-scroll-speed="1">INTRODUCTION</h3>
-                    <h1 className='heading-primary' data-scroll data-scroll-speed="2">OVERVIEW..</h1>
-                    <p className='text-1'>
+                    <h3 className='heading-secondary' data-aos="fade-right" onClick={handleLight}>INTRODUCTION</h3>
+                    <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='200'>OVERVIEW..</h1>
+                    <p className='text-1' data-aos='fade-up' data-aos-delay='350'>
                         I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React,
                         Node.js and ThreeJS. I'm a quick learner and collaborate closely with clients to create efficient, scaleble and user-friendly solutions that solve real-world problems.
                         Let work together to bring ideas to life.
                     </p>
                 </div>
                 <div className='bulb-container'>
-                    {theme === 'dark-theme' && 
-                        <svg onClick={() => setLightOn(!lightOn)} version="1.0" id='light-bulb' xmlns="http://www.w3.org/2000/svg" height="336.000000pt" viewBox="0 0 216.000000 336.000000" preserveAspectRatio="xMidYMid meet">
+                    {/* {theme === 'dark-theme' &&  */}
+                        <svg ref={lightRef} onClick={() => setLightOn(!lightOn)} version="1.0" id='light-bulb' xmlns="http://www.w3.org/2000/svg" height="336.000000pt" viewBox="0 0 216.000000 336.000000" preserveAspectRatio="xMidYMid meet">
                             <g transform="translate(0.000000,336.000000) scale(0.100000,-0.100000)"
                             fill="#fff" stroke="none">
                             <path d="M969 3210 c-91 -11 -208 -44 -294 -84 -207 -96 -391 -282 -487 -494
@@ -42,14 +51,14 @@ const Overview = ({ theme }) => {
                             51 12 53 17 53 160 l0 134 -440 0 -440 0 0 -134z"/>
                             </g>
                         </svg>
-                    }
+                    {/* } */}
                     {/* <span className={`one ${theme === 'dark-theme' && lightOn ? 'active' : ''}`}></span> */}
                     <span className={`two ${theme === 'dark-theme' && lightOn ? 'active' : ''}`}></span>
                     <span className={`three ${theme === 'dark-theme' && lightOn ? 'active' : ''}`}></span>
                 </div>
             </div>
             <div className={`drop-cards container d-flex flex-column flex-lg-row justify-content-center align-items-center ${theme === 'light-theme' || lightOn ? 'active' : ''}`}>
-                <div className='card-wrapper'>
+                <div className='card-wrapper'data-aos="fade-left">
                     <div className="drop left" style={{'--clr': '#ff0f5b'}}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">
@@ -64,7 +73,7 @@ const Overview = ({ theme }) => {
                         <span className='drop-reflection big'></span>
                     </div>
                 </div>
-                <div className='card-wrapper'>
+                <div className='card-wrapper'data-aos="fade-up">
                     <div className="drop middle" style={{'--clr': '#be01fe', backgroundImage : theme === 'light-theme' ? `url(${Screenshot4})` : ''}} onClick={() => window.initPixi('#overview', 'https://tse3.mm.bing.net/th?id=OIP.JSbdSoh5Wq-BMbDl2BUluAHaE5&pid=Api&P=0')}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">
@@ -78,7 +87,7 @@ const Overview = ({ theme }) => {
                         <span className='drop-reflection big'></span>
                     </div>
                 </div>
-                <div className='card-wrapper'>
+                <div className='card-wrapper'data-aos="fade-right">
                     <div className="drop right" style={{'--clr': '#01b4ff'}}>
                         <div className="content d-flex justify-content-center align-items-center flex-column text-center">
                         <h1 className="d-flex justify-content-center align-items-center">

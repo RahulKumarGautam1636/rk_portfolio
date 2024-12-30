@@ -23,10 +23,10 @@ const Projects = ({ theme }) => {
     return (
         <section id="projects">
             <div className="container">
-                <div className="row">
-                    <h3 className='heading-secondary' onClick={rotateLeft}>MY WORKS</h3>
-                    <h1 className='heading-primary' onClick={rotateRight}>PROJECTS..</h1>
-                    <p className='text-1'>
+                <div className="row" style={{marginBottom: '8rem'}}>
+                    <h3 className='heading-secondary' data-aos="fade-right" onClick={rotateLeft}>MY WORKS</h3>
+                    <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='200' onClick={rotateRight}>PROJECTS..</h1>
+                    <p className='text-1' data-aos='fade-up' data-aos-delay='350'>
                         Following projects showcases my skills and experience through rea-world examples of my work. Each project is briefly described with links to code repositories and live demos in it.
                         It reflects my ability to solve complex problems, work with different technologies and manage project effectively.
                     </p>
@@ -45,7 +45,7 @@ const Projects = ({ theme }) => {
                             <div className="project one" style={{'--i': 5}}></div>
                             <div className="project two" style={{'--i': 6}}></div>
                             <div className="project three" style={{'--i': 7}}>
-                            <p className='text-1' style={{fontSize: '1rem'}}>
+                            <p className='text-1' style={{fontSize: '1rem'}} data-aos='fade-up' data-aos-delay='350'>
                                 Following projects showcases my skills and experience through rea-world examples of my work. Each project is briefly described with links to code repositories and live demos in it.
                                 It reflects my ability to solve complex problems, work with different technologies and manage project effectively.
                             </p>
