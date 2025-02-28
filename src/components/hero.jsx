@@ -24,7 +24,7 @@ const Hero = ({ theme }) => {
           <div className="row row-cols-1 row-cols-md-2 px-2" style={{zIndex: 2}}>
             <div className="order-2 order-md-1 col d-flex flex-column justify-content-center align-items-start pb-5 mt-5 mt-lg-0 position-relative">
               {/* <img id="emojiSmily" className="floating-image" src="assets/img/emojiSmily.png" alt="emojiSmily"/>  */}
-              <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='300'>Hy! I Am<br/>
+              <h1 className='heading-primary' data-aos="fade-left" data-aos-delay='300'>Hi, I Am<br/>
                 R. K. Gautam</h1>
               <p data-aos="fade-right" data-aos-delay='300'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum has been the. Lorem Ipsum has been the.</p>
               <button id="hireMe" className="btn btn-lg btn-info text-white btn-hireMe pe-auto moveInBottom" type="button" name="button">Hire Me</button>
